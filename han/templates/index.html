@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Page Title</title>
+    </head>
+    <body>
+        <form method="POST" action="{{ url_for('analyze') }}">
+            <div>
+                <label for="choice">Choose the functionality:</label>
+                <select id="choice" name="choices">
+                    <option value="one">Make a sentence</option>
+                    <option value="two">Generate a paragraph with chosen number of words</option>
+                </select>
+                <label for="number">Choose your accuracy level:</label>
+                <input id="number" type="number" name="accuracy" class="accuracy-input">
+                <label for="word">Input your first word:</label>
+                <input id="word" type="text" name="word" class="word-input">
+                <label for="count">The number of words want to be generated</label>
+                <input id="count" type="number" name="count" class="count-input">
+
+
+            </div>
+
+            <button type="sumbit" class="btn">Submit</button>
+        </form>
+        <p class="text-output">Result: {{ text }}</p>
+    </body>
+</html>
